@@ -1,0 +1,43 @@
+---
+import Header from "../components/header.astro";
+import Track from "../components/first.astro";
+import Sale from "../components/second.astro";
+import About from "../components/third.astro";
+import Map from "../components/fourth.astro";
+import carousel from "../assets/images/carousel.png";
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Track />
+      <Sale />
+      <About />
+      <Map />
+      <section
+        class="container mx-auto flex flex-col justify-center items-center mt-5 py-[30px]"
+      >
+        <h1
+          class="text-[#333] text-[48px] w-[540px] mb-[16px] font-semibold text-center"
+        >
+          Фоточки
+        </h1>
+        <img src={carousel.src} alt="" />
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
